@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}">
+    <title>error</title>
+</head>
+<body>
+    <div class="m-container">
+        <div class="ui container">
+            <div class="ui teal basic segment">
+                <h2>error</h2>
+                <P>对不起，服务出现了问题，请联系管理员</P>
+            </div>
+            <p th:utext="'<!--'" th:remove="tag"></p>
+            <div th:remove="tag">
+                <p th:remove="tag">Failed Request URL : <span th:text="${url}" th:remove="tag"></span></p>
+                <p th:remove="tag">Exception Message : <span th:text="${exception.message}" th:remove="tag"></span></p>
+                <ul th:remove="tag">
+                    <li th:each="st : ${exception.stackTrace}" th:remove="tag">
+                        <span th:text = "${st}" th:remove="tag"></span>
+                    </li>
+                </ul>
+            </div>
+            <p th:utext="'-->'" th:remove="tag"></p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+</body>
+</html>

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="/_fragments :: head(~{::title})">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>博客详情</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
-    <link rel="stylesheet" href="css/me.css">
-    <link rel="stylesheet" href="css/typo.css">
-    <link rel="stylesheet" href="lib/tocbot/tocbot.css">
+    <link rel="stylesheet" href="../static/css/me.css">
+    <link rel="stylesheet" href="../static/css/typo.css">
+    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css">
 </head>
 <body>
 
@@ -15,7 +15,7 @@
     <nav class="ui segment inverted attached m-padding-tb-mini m-shadow-small">
         <div class="container">
             <div class="ui inverted stackable menu secondary">
-                <h2 class="ui teal header item">Mr.Wu</h2>
+                <h2 class="ui teal header item">blog</h2>
                 <a href="#" class="item m-mobile-hide m-item"><i class="mini home icon"></i>首页</a>
                 <a href="#" class="item m-mobile-hide m-item"><i class="mini  idea icon"></i>分类</a>
                 <a href="#" class="item m-mobile-hide m-item"><i class="mini tags icon"></i>标签</a>
@@ -628,7 +628,7 @@ h5,h6{font-size:1em;}
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
-    <script src="lib/tocbot/tocbot.min.js"></script>
+    <script src="../static/lib/tocbot/tocbot.min.js"></script>
 
     <script>
         tocbot.init({

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="/_fragments :: head(~{::title})">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>关于我</title>
@@ -10,15 +10,15 @@
 <body>
 
     <!--导航-->
-    <nav class="ui segment inverted attached m-padding-tb-mini m-shadow-small">
+    <nav class="ui segment inverted attached m-padding-tb-mini m-shadow-small" th:replace="/_fragments :: menu(5)">
         <div class="container">
             <div class="ui inverted stackable menu secondary">
-                <h2 class="ui teal header item">关于我</h2>
-                <a href="#" class="active item m-mobile-hide m-item"><i class="mini home icon"></i>首页</a>
+                <h2 class="ui teal header item">blog</h2>
+                <a href="#" class="item m-mobile-hide m-item"><i class="mini home icon"></i>首页</a>
                 <a href="#" class="item m-mobile-hide m-item"><i class="mini  idea icon"></i>分类</a>
                 <a href="#" class="item m-mobile-hide m-item"><i class="mini tags icon"></i>标签</a>
                 <a href="#" class="item m-mobile-hide m-item"><i class="mini clone icon"></i>归档</a>
-                <a href="#" class="item m-mobile-hide m-item"><i class="mini info icon"></i>关于我</a>
+                <a href="#" class="active item m-mobile-hide m-item"><i class="mini info icon"></i>关于我</a>
                 <div class="right item m-mobile-hide m-item">
                     <div class="ui input icon transparent inverted">
                         <input type="text" placeholder="Search......">
@@ -85,7 +85,7 @@
                         <div class="ui weixinQR popup transition hidden">
                             <div class="ui orange basic label">
                                 <div class="ui small image">
-                                    <img src="../static/image/wechat.jpg" alt="">
+                                    <img src="../static/image/wechat.jpg" th:src="@{image/wechat.jpg}">
                                 </div>
                             </div>
                         </div>
@@ -95,7 +95,7 @@
         </div>
     </div>
     <!--底部-->
-    <footer class="ui segment inverted attached ">
+    <footer class="ui segment inverted attached" th:replace="/_fragments :: footer">
         <div class="ui container center aligned m-padding-tb-max">
             <div class="ui divided grid inverted stackable">
                 <div class="three wide column">
